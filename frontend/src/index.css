@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-white text-gray-900 dark:bg-slate-950 dark:text-gray-100;
+  }
+  body {
+    @apply bg-white dark:bg-slate-950;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { @apply bg-gray-100 dark:bg-slate-800; }
+::-webkit-scrollbar-thumb { @apply bg-gray-400 dark:bg-slate-600 rounded; }
