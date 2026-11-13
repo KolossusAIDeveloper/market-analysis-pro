@@ -1,6 +1,6 @@
 import random
 import math
-from datetime import datetime
+from datetime import datetime, timezone
 from app.services.market_data import get_ohlc
 
 
@@ -74,5 +74,5 @@ def get_prediction(symbol: str) -> dict:
             "fii_net": fii_net,
             "news_sentiment": news_sentiment,
         },
-        "timestamp": datetime.utcnow().isoformat(),
+        "timestamp": datetime.now(timezone.utc).isoformat(),
     }

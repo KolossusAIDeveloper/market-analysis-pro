@@ -8,8 +8,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: pip install -r backend/requirements.txt pytest pytest-asyncio httpx
-      - run: cd backend && python -m pytest ../tests/ -v
+      - run: pip install fastapi uvicorn pydantic pydantic-settings yfinance pandas numpy scikit-learn xgboost httpx python-multipart pytest pytest-asyncio
+      - run: python -m pytest tests/ -v
   frontend:
     runs-on: ubuntu-latest
     steps:
